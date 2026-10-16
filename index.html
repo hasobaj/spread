@@ -56,7 +56,6 @@
 			</article>
 
 			<article>
-				<section>
 					<h2>Interface writing</h2>
 					<ul>
 						<li>buttons</li>
@@ -83,17 +82,71 @@
 					<p>We used to have this program called Dr. Sbaitso, which you may have heard of. It was a computerized psychologist slash artificial intelligence program designed to show off sound cards, but I thought it was a game and used to play with it for hours.</p>
 
 					<p>This is what it looked like. A typical, boring DOS interface.</p>
-					
+
+					<div>
+						<div>
+							<p>Sound Blaster</p>
+							<p>Dr Sbaitso</p>
+							<p>version 2.20</p>
+						</div>
+
+						<p>(c) Copyright Creative Labs, Inc. 1992, all rights reserved</p>
+
+						<p>Please enter your name ...Nicole</p>
+					</div>
+
+					<div>
+						<div>
+							<p>Sound Blaster</p>
+							<p>Dr Sbaitso</p>
+							<p>version 2.20</p>
+						</div>
+
+						<p>(c) Copyright Creative Labs, Inc. 1992, all rights reserved</p>
+
+						<p>Please enter your name ...Nicole</p>
+						<p>Hello Nicole, my name is doctor Sbaitso.</p>
+						<p>I am here to help you.</p>
+						<p>Say whatever is in your mynd freely</p>
+						<p>Our conversation will be kept in strict confidence.</p>
+						<p>Memory Contents will be wiped off after you leave,</p>
+
+						<p>so, tell me about your problems.</p>
+
+						<p>>_</p>
+
+					</div>
+
 					<p>Dr. Sbaitso would tell me what to do and I’d tell him about my 9-year-old problems. At the time, I was usually hungry or tired or bored. So I would answer in one of three ways.</p>
+
+					<aside>
+						<p>> I'm bored.</p>
+					</aside>
+
 					<p>And then he would ask, “Why are you bored?” or “Are you sure you are bored?” And then I would say, yes, I’m sure and start repeating myself. Next thing I know, he’s shouting a zen koan at me like this:</p>
-					<p>And this would result in me having a tiny existential freakout. I would get sick of that topic and switch over to cussing or saying something inappropriate. And if I did that long enough, Dr. Sbaitso would throw a parity error.</p>
+
+					<aside>
+						<p>The world is full of possibilities, Nicole, be happy with what you are</p>
+					</aside>
+
+					<p>And this would result in me having a tiny existential freakout. I would get sick of that topic and switch over to cussing or saying something inappropriate. And if I did that long enough, Dr. Sbaitso would throw a <a href="https://www.youtube.com/watch?v=1GaWfCWcW3M"> parity error.</a></p>
+
 					<p>The reason I bring this up is that it shapes how I think about interface writing. Dr. Sbaitso was pre-programmed with all of these different strings to respond with.</p>
+
+					<aside>
+						<p>Do you belive it is normal to {be bored}? What strings red} {Nicole}, don't be so defensive</p>
+					</aside>
+
 					<p>And while most of them were cold, poorly punctuated, and hilariously impersonal, the model of prompting the reader—this kind of call and response—really worked. It felt like a conversation. Maybe it was a little awkward, but it was a good start.</p>
+
 					<p>When you’re writing for the web, you’re having the same sort of conversation with your readers. You’re telling them to do something or asking them a question. Above all, you want it to make sense and feel natural to them. Our strings have to be useful—not funny—so we need to do the extra work of figuring out what our readers need. That makes it easier to show people around, ask for more of their time, or get them to take a particular action.</p>
-					<p>In his essay We Have Always Coded, Tim Maly says:</p>
+
+					<p>In his essay <a href="https://medium.com/weird-future/we-have-always-coded-2acc5ba75929">We Have Always Coded</a>, Tim Maly says:</p>
+
 					<blockquote>
 						<p>"It is no coincidence that many women have compared weaving code to instructing a child. With both kids and computers, you must carefully think through what you want them to do, and then carefully phrase your commands.”</p>
 					</blockquote>
+
 					<p>From a high level, these are my goals when I’m writing strings:</p>
 					<ul>
 						<li>Be clear.</li>
@@ -101,9 +154,18 @@
 						<li>Be careful.</li>
 						<li>Be honest.</li>
 					</ul>
+
 					<p>Focus on the reader’s needs. Think about the implications of what you’re asking for. Be honest about what you’re doing with the data. That’s extremely important.</p>
+
+					<aside>
+						<!-- using span https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span :element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes. -->
+						<span>Name</span><span>Address</span><span>Phonenumber</span><span>City</span><span>State</span><span>Company</span><span>Credit</span><span>Card</span><span>Deliverydate</span><span>Rating</span><span>Photo</span><span>Ipadaddress</span><span>Email</span><span>Gender</span><span>Maritalstatus</span><span>Age</span><span>Birthday</span><span>Socialsecuritynumber</span><span>Language</span><span>Income</span><span>Title</span><span>Education</span><span>Contet</span><span>Network</span>
+					</aside>
+
 					<p>Frank Chimero says, “Every form is a question.” What are you asking through forms and flows? How can you make those questions meaningful and generous for your users?</p>
+
 					<p>Here are some examples of things you might be asking:</p>
+
 					<ul>
 						<li>How can we help you?</li>
 						<li>What are you interested in?</li>
@@ -118,22 +180,24 @@
 						<li>Is it okay if we share this information?</li>
 						<li>What do you think about when you’re alone?</li>
 					</ul>
-					<p>You probably wouldn’t ask a complete stranger these things without a conversation or consent.</p>
-					<p>Each of these interactions should feel like a conversation between two people who trust each other and deserve each other’s trust. It can’t be one-sided. Unless you want to be cold like Dr. Sbaitso or creepy like HAL, you need to take the time to think about these prompts and put yourself in the reader’s shoes. So let’s talk about how to do this.</p>
 
-					</section>
+					<p>You probably wouldn’t ask a complete stranger these things without a conversation or consent.</p>
+
+					<p>Each of these interactions should feel like a conversation between two people who trust each other and deserve each other’s trust. It can’t be one-sided. Unless you want to be cold like Dr. Sbaitso or creepy like <a href="https://en.wikipedia.org/wiki/HAL_9000">HAL</a>, you need to take the time to think about these prompts and put yourself in the reader’s shoes. So let’s talk about how to do this.</p>
 				</article>
 
 				<article>
 					<section>
 						<h2>Tips</h2>
-						<ul>
-							<li>Start with questions.</li>
-							<li>Be a good tour guide.</li>
-							<li>Turn your chair.</li>
-							<li>Show you care.</li>
-							<li>Write iteratively.</li>
-						</ul>
+						<nav>
+							<ul>
+								<li>Start with questions.</li>
+								<li>Be a good tour guide.</li>
+								<li>Turn your chair.</li>
+								<li>Show you care.</li>
+								<li>Write iteratively.</li>
+							</ul>
+						</nav>
 					</section>
 
 					<section>
