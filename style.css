@@ -1,1 +1,19 @@
 
+:root {
+	--spacing: 1rem;
+	--font-main: "Arial";
+	--font-secondary: "Times New Roman";
+	--fontsize-large:2rem;
+}
+
+
+h1 {
+	text-transform:uppercase;
+	font-family: var(--font-secondary);
+	font-size: var(--fontsize-large);
+}
+
+aside{
+	/* temp solution */
+	overflow-wrap: anywhere;
+}
