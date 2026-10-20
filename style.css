@@ -1,11 +1,13 @@
-
 :root {
 	--spacing: 1rem;
-	--font-main: "Arial";
-	--font-secondary: "Times New Roman";
+	--font-main: "Cutive Mono";
+	--font-secondary: "Bayon";
 	--fontsize-large:2rem;
 }
 
+body{
+	font-family: var(--font-main);
+}
 
 h1 {
 	text-transform:uppercase;
