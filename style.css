@@ -1,8 +1,13 @@
 :root {
 	--spacing: 1rem;
-	--font-main: "Cutive Mono";
-	--font-secondary: "Bayon";
+	--font-main: HALRepost, Cutive Mono;
+	--font-secondary: Bayon, Arial;
 	--fontsize-large:2rem;
+}
+
+@font-face{
+	font-family: 'HALRepost';
+	src: url('HALRepostMonoTest-Regular.otf') format('opentype');
 }
 
 body{
