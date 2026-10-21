@@ -1,8 +1,12 @@
+
+
 :root {
 	--spacing: 1rem;
 	--font-main: HALRepost, Cutive Mono;
 	--font-secondary: Bayon, Arial;
-	--fontsize-large:2rem;
+	--fontsize:2rem;
+	--fontsize-h1: calc(var(--fontsize)*5);
+	--fontsize-picture-title: calc(var(--fontsize)*2);
 }
 
 @font-face{
@@ -12,15 +16,21 @@
 
 body{
 	font-family: var(--font-main);
+	padding: calc(var(--spacing)*2);
 }
 
 h1 {
 	text-transform:uppercase;
 	font-family: var(--font-secondary);
-	font-size: var(--fontsize-large);
+	font-size: var(--fontsize-h1);
 }
 
 aside{
 	/* temp solution */
 	overflow-wrap: anywhere;
+}
+
+.picturetitle{
+	font-family: Bayon;
+	font-size: var(--fontsize-picture-title);
 }
