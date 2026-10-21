@@ -6,7 +6,9 @@
 	--font-secondary: Bayon, Arial;
 	--fontsize:2rem;
 	--fontsize-h1: calc(var(--fontsize)*5);
+	--fontsize-nav: calc(var(--fontsize)*2);
 	--fontsize-picture-title: calc(var(--fontsize)*2);
+	--line-height: 1.5;
 }
 
 @font-face{
@@ -17,20 +19,53 @@
 body{
 	font-family: var(--font-main);
 	padding: calc(var(--spacing)*2);
+
 }
 
 h1 {
 	text-transform:uppercase;
 	font-family: var(--font-secondary);
+	line-height: calc(var(--line-height)/1.5);
 	font-size: var(--fontsize-h1);
 }
+
+p{
+	line-height: var(--line-height);
+}
+
+/* section {
+	line-height: var(--line-height);
+} */
 
 aside{
 	/* temp solution */
 	overflow-wrap: anywhere;
 }
 
-.picturetitle{
+.picturetitle {
 	font-family: Bayon;
 	font-size: var(--fontsize-picture-title);
+
+}
+
+nav {
+	font-family: var(--font-secondary);
+	text-transform:uppercase;
+	font-size: var(--fontsize-nav);
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	gap: 5rem;
+	justify-content: center;
+}
+
+
+@media (width <= 500px) {
+
+	:root {
+		--fontsize: 0.5rem;
+	}
+
 }
