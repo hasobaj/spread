@@ -72,15 +72,21 @@ nav ul {
 
 nav ul li{
 	padding-inline:calc(var(--spacing)/2);
-	/* padding-block: calc(var(--spacing)/4); */
 	border: black 0.1rem solid;
 	border-radius: 70px;
 	background-color: var(--color-main);
 }
 
-.picturetitle{
+#codeforhumans{
+display: flex;
+flex-direction: column;
+}
+
+
+h4{
 	font-family: Bayon;
 	font-size: calc(var(--fontsize-base)*3);
+	line-height: calc(var(--line-height)/1.5);
 }
 
 .picturesub{
@@ -98,3 +104,5 @@ nav ul li{
 	flex-direction: row;
 	gap: 3rem;
 }
+
+
