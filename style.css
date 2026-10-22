@@ -117,7 +117,7 @@ h4{
 
 .picture1 {
 	text-align: end;
-	margin-inline: -0.25rem;
+	margin-inline: -0.25em;
 }
 
 
@@ -143,7 +143,7 @@ h3 {
 
 
 #tips details{
-	margin-block-end: calc(var(--spacing)/2);
+	margin-block-end: calc(var(--spacing)/1.5);
 }
 
 #tips summary{
@@ -164,4 +164,21 @@ h3 {
 #tips summary::after{
 	content: ">";
 	transform: rotate(90deg);
+}
+
+#tips summary::after :open{
+	content: ">";
+	transform: rotate(180deg);
+}
+
+.tipcontent {
+border: black 0.1rem solid;
+border-radius: 20px;
+margin-block-start: calc(var(--spacing)/2);
+margin-block-end: calc(var(--spacing)/1);
+padding-inline:var(--spacing);
+padding-block: var(--spacing);
+
+block-size: calc(var(--spacing)*23);
+overflow-x: hidden;
 }
