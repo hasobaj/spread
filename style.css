@@ -1,5 +1,3 @@
-
-
 :root {
 	--spacing: 1.2rem;
 
@@ -23,8 +21,8 @@ body{
 	line-height: var(--line-height);
 }
 
-p {
-	margin: var(--spacing);
+header{
+	padding-block-end: calc(var(--spacing)*3);
 }
 
 article{
@@ -58,14 +56,14 @@ aside{
 	overflow-wrap: anywhere;
 }
 
-nav {
+#navone {
 	font-family: var(--font-secondary);
 	text-transform:uppercase;
 	position: sticky;
 	top:var(--spacing);
 }
 
-nav ul {
+#navone ul {
 	display: flex;
 	flex-direction: row;
 	gap: 0.5rem;
@@ -73,7 +71,7 @@ nav ul {
 	justify-content: space-between;
 }
 
-nav ul li{
+#navone ul li{
 	padding-inline:calc(var(--spacing)/2);
 	border: black 0.1rem solid;
 	border-radius: 70px;
@@ -83,8 +81,18 @@ nav ul li{
 #codeforhumans{
 display: flex;
 flex-direction: column;
+
+& > p:nth-child(1){ /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator */
+	padding-block-end: calc(var(--spacing)*3);
 }
 
+& > p:not(:nth-child(1)){
+margin-block-end: var(--spacing);}
+}
+
+section{
+	padding-block-end: calc(var(--spacing)*3);
+}
 
 h4{
 	font-family: var(--font-secondary);
@@ -95,10 +103,7 @@ h4{
 .picturesub{
 	font-size: calc(var(--fontsize-base)*1.5);
 	font-family: var(--font-secondary);
-}
-
-#headerinfo{
-	margin-block: calc(var(--spacing)*2);
+	line-height: calc(var(--line-height)/1.5);
 }
 
 #namedate {
@@ -110,8 +115,9 @@ h4{
 }
 
 
-.picture2 {
+.picture1 {
 	text-align: end;
+	margin-inline: -0.25rem;
 }
 
 
@@ -136,3 +142,26 @@ h3 {
 }
 
 
+#tips details{
+	margin-block-end: calc(var(--spacing)/2);
+}
+
+#tips summary{
+	font-family: var(--font-secondary);
+	font-size: calc(var(--fontsize-base)*1.5);
+	text-transform:uppercase;
+	padding-inline:var(--spacing);
+	padding-block: calc(var(--spacing)/3);
+	border: black 0.1rem solid;
+	border-radius: 70px;
+	background-color: var(--color-main);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+#tips summary::after{
+	content: ">";
+	transform: rotate(90deg);
+}

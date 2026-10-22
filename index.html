@@ -24,7 +24,7 @@
 			</hgroup>
 		</header>
 
-			<nav>
+			<nav id="navone">
 				<ul>
 					<li><a href="#codeforhumans">Code for Humans</a></li>
 					<li><a href="#interfacewriting">Interface Writing</a></li>
@@ -36,33 +36,33 @@
 			<article id="codeforhumans">
 				<p>The web and the world are full of instructions. Everywhere you go, signs and people are telling you what to do.</p>
 
-				<section class="picture1">
+				<section>
 					<h4>Crosswalk</h4>
 					<p class="picturesub">Walk. Don’t walk.</p>
 					<p class="picturesub">Follow me please. Stop. Hang on. Please stand clear.</p>
 				</section>
 
-				<section class="picture2">
+				<section class="picture1">
 					<h4>Stop sign</h4>
 					<p class="picturesub">Fasten your seatbelt. Read this.</p>
 				</section>
 
-				<section class="picture1">
+				<section>
 					<h4>Press button to open door</h4>
 					<p class="picturesub">Do this.</p>
 				</section>
 
-				<section class="picture2">
+				<section class="picture1">
 					<h4>Notice to credit card customers</h4>
 					<p class="picturesub">Do this.</p>
 				</section>
 
-				<section class="picture1">
-					<h4>Free Vinyl!></h4>
+				<section>
+					<h4>Free Vinyl!</h4>
 					<p class="picturesub">Take this. Buy this. Find us on Facebook. Please enter your name.</p>
 				</section>
 
-					<p class="picturesub">You get the idea. So bossy.</p>
+					<p>You get the idea. So bossy.</p>
 
 					<p>Think about the app you’re building right now.</p>
 					<p>What actions can people take? What are you asking them to do? What are you allowing them to do? What are the rules and dead-ends? What sort of language do you use to guide people?</p>
@@ -202,9 +202,9 @@
 				</article>
 
 				<article id="tips">
-					<header>
-						<h2>Tips</h2>
-						<nav>
+					<h2>Tips</h2>
+					<!-- <header>
+						<nav id="navtwo">
 							<ul>
 								<li>Start with questions.</li>
 								<li>Be a good tour guide.</li>
@@ -213,24 +213,24 @@
 								<li>Write iteratively.</li>
 							</ul>
 						</nav>
-					</header>
+					</header> -->
 
-					<section>
-						<h3>1. Start with questions.</h3>
-						<p>It’s easy to ship something out in a hurry. Before you do, ask yourself a few simple questions:</p>
-						<ul>
-							<li>What is the user trying to do?</li>
-							<li>What might they be feeling?</li>
-							<li>How did they get here?</li>
-							<li>What happens next?</li>
-							<li>What do they need to understand?</li>
-							<li>Why does this matter to them?</li>
-						</ul>
-						<p>When you’re looking at a particular interface label or message, keep it short and focused on what the reader needs. (See the full list of <a href="https://www.nicelysaid.co/research-questions">research questions from my book</a>.)</p>
-					</section>
+					<details>
+							<summary>1. Start with questions.</summary>
+							<p>It’s easy to ship something out in a hurry. Before you do, ask yourself a few simple questions:</p>
+							<ul>
+								<li>What is the user trying to do?</li>
+								<li>What might they be feeling?</li>
+								<li>How did they get here?</li>
+								<li>What happens next?</li>
+								<li>What do they need to understand?</li>
+								<li>Why does this matter to them?</li>
+							</ul>
+							<p>When you’re looking at a particular interface label or message, keep it short and focused on what the reader needs. (See the full list of <a href="https://www.nicelysaid.co/research-questions">research questions from my book</a>.)</p>
+					</details>
 
-					<section>
-						<h3>2. Be a good tour guide.</h3>
+					<details>
+						<summary>2. Be a good tour guide.</summary>
 						<p>Think about what you’d do if one of your close friends came to visit you at work, or maybe they’re in from out of town. You’d probably show them a few of your favorite things. Give the reader that same sort of care. You know your apps and websites better than most people, so use that to your advantage.</p>
 						<p>If you’re not sure where to start, make a map for yourself. Take screenshots of each part of a flow and look at them together. Start with your signup, checkout, or donation flows. See where you can add specific details and useful examples to simplify your instructions.</p>
 						<p>Think about the hidden gems on your site too. If the user isn’t ready to make a purchase or sign up, what else can they do? I like to think of this as the Choose Your Own Adventure approach to web design. Don’t leave the user hanging, and watch out for dead-ends. Tell them what to expect and help them accomplish their goal.</p>
@@ -248,10 +248,10 @@
 						</ul>
 						<p>Right away, you can see which ones are too similar. They’re using both “Log in” and “Sign in,” so I’d suggest cutting the “Log in” language to simplify. You can also see that they’re having a trouble deciding if the reader is “you” or “me.” I usually go with “you” to avoid the confusion, but you could also cut the pronouns and possessive adjectives.</p>
 						<p>The terms you choose are a style choice; it’s not about right and wrong. But you should be consistent and match the language your users relate to. If you call something “notifications” in one place, call them “notifications” everywhere. That will help you reduce cognitive load on your readers and save money on translations, too.</p>
-					</section>
+					</details>
 
-					<section>
-						<h3>3. Turn your chair.</h3>
+					<details>
+						<summary>3. Turn your chair.</summary>
 						<p>Shift your focus to your readers. Talk to them, not at them. Use positive language and avoid yammering on about your company or your interface. The system isn’t the point.</p>
 						<p>Here’s a great example from Square Cash.</p>
 
@@ -260,10 +260,10 @@
 						<p>Here’s another example from Oyster, a book subscription service:</p>
 
 						<p class="description">I signed up for their trial and they sent me a link to their mobile app. But instead of talking about themselves or explaining the features, they’re helping me get right to it. They say, “Why are you still reading this email? Download the app and dive into your first book!” I love that.</p>
-					</section>
+					</details>
 
-					<section>
-						<h3>4. Show you care.</h3>
+					<details>
+						<summary>4. Show you care.</summary>
 						<p>Now’s the time when I’ll tell you what not to do, since some people find that useful.</p>
 						<p>Don’t assume you’re the core audience. Most of the time, we’re not designing for ourselves. Think about the universe of people out there. Word choice is extremely important when you’re trying to grow.</p>
 						<p>Avoid jargon and catchphrases. Cut the bullshit. You don’t have to be hip or clever, but you do have to be nice.</p>
@@ -306,10 +306,10 @@
 						<blockquote>
 							<p>“The only unit of time that matters is heartbeats. The time you spend is not your own.”</p>
 						</blockquote>
-					</section>
+					</details>
 
-					<section>
-						<h3>5. Write iteratively.</h3>
+					<details>
+						<summary>5. Write iteratively.</summary>
 						<p>You write code iteratively, so why not the rest of it? It’s okay if your interface writing isn’t perfect. But you better believe that you need to go back and clean up those strings before you go live.</p>
 						<p>One way to make that easier is to organize your code. Maybe you have a mailer folder for all of your emails or an errors folder for your error messages. You can do that in Ruby with your localization file. Make it easy for yourself and your team to keep things up to date. If you’re writing QA tests, please don’t hard code strings into them. Start with the assumption that the copy will change.</p>
 						<p>Writing is a messy, iterative process. Here’s an example of what a writing plan looks like for me. This is an illustration by Alvin Diec from the book I coauthored, <a href="https://www.nicelysaid.co/"> Nicely Said.</a></p>
@@ -337,7 +337,7 @@
 						<p>You should never test something you wouldn’t ship. Don’t throw your principles out for numbers. Your readers don’t know a test from a normal piece of text. If you’re not comfortable with a particular phrase, it doesn’t belong in a test.</p>
 						<p>Lastly, remember the text can change. Don’t try to perfect it the first time. Keep refining it. Make it clear, and then make it clearer. Find a way to build a system that works for your readers and your business.</p>
 						<p>Thank you.</p>
-					</section>
+					</details>
 			</article>
 		</main>
 
