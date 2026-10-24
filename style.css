@@ -64,6 +64,7 @@ aside{
 	text-transform:uppercase;
 	position: sticky;
 	top:var(--spacing);
+	/* less words in nav to make font size bigger */
 	.navphone{
 		display: none;
 	}
@@ -220,6 +221,8 @@ main p:last-child {
 		justify-content: start;
 		gap: 1rem;
 	}
+
+	/* adds words to nav */
 	#navone .navphone{
 		display: inline;
 	}
