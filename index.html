@@ -1,4 +1,5 @@
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
 		<title>Interface Writing</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
 				<h1>Code for Humans</h1>
 				<div id="namedate">
 					<a href="https://www.nicolefenton.com">Nicole Fenton</a>
-					<time datetime="2014-08-2">August 2, 2014</time>
+					<time datetime="2014-08-02">August 2, 2014</time>
 				</div>
 				<p id="headerinfo">I gave this talk at <a href="https://www.burlingtonrubyconference.com">Burlington Ruby Conference</a> in Vermont and <a href="https://www.blendconf.com"> Blend Conference</a> in Charlotte, North Carolina.</p>
 			</hgroup>
@@ -37,28 +38,28 @@
 				<p>The web and the world are full of instructions. Everywhere you go, signs and people are telling you what to do.</p>
 
 				<section>
-					<h4>Crosswalk</h4>
+					<h3>Crosswalk</h3>
 					<p class="picturesub">Walk. Don’t walk.</p>
 					<p class="picturesub">Follow me please. Stop. Hang on. Please stand clear.</p>
 				</section>
 
 				<section class="picture1">
-					<h4>Stop sign</h4>
+					<h3>Stop sign</h3>
 					<p class="picturesub">Fasten your seatbelt. Read this.</p>
 				</section>
 
 				<section>
-					<h4>Press button to open door</h4>
+					<h3>Press button to open door</h3>
 					<p class="picturesub">Do this.</p>
 				</section>
 
 				<section class="picture1">
-					<h4>Notice to credit card customers</h4>
+					<h3>Notice to credit card customers</h3>
 					<p class="picturesub">Do this.</p>
 				</section>
 
 				<section>
-					<h4>Free Vinyl!</h4>
+					<h3>Free Vinyl!</h3>
 					<p class="picturesub">Take this. Buy this. Find us on Facebook. Please enter your name.</p>
 				</section>
 
@@ -127,34 +128,37 @@
 						<p>Memory Contents will be wiped off after you leave,</p>
 
 						<p>so, tell me about your problems.</p>
-
-						<h4>>_</h4>
-
 					</div>
 
 					<p>Dr. Sbaitso would tell me what to do and I’d tell him about my 9-year-old problems. At the time, I was usually hungry or tired or bored. So I would answer in one of three ways.</p>
 
-					<aside>
-						<h4> I'm bored.</h4>
-					</aside>
+					<div id="picturegrid">
+						<aside class="picturetwo">
+							<p>> I'm bored.</p>
+						</aside>
 
-					<p>And then he would ask, “Why are you bored?” or “Are you sure you are bored?” And then I would say, yes, I’m sure and start repeating myself. Next thing I know, he’s shouting a zen koan at me like this:</p>
+						<p>And then he would ask, “Why are you bored?” or “Are you sure you are bored?” And then I would say, yes, I’m sure and start repeating myself. Next thing I know, he’s shouting a zen koan at me like this:</p>
 
-					<aside>
-						<p class="picturesub">The world is full of possibilities, Nicole, be happy with what you are</p>
-					</aside>
+						<aside class="picturetwo">
+							<p>The world is full of possibilities, Nicole, be happy with what you are</p>
+						</aside>
 
-					<p>And this would result in me having a tiny existential freakout. I would get sick of that topic and switch over to cussing or saying something inappropriate. And if I did that long enough, Dr. Sbaitso would throw a <a href="https://www.youtube.com/watch?v=1GaWfCWcW3M"> parity error.</a></p>
+						<div>
+							<p>And this would result in me having a tiny existential freakout. I would get sick of that topic and switch over to cussing or saying something inappropriate. And if I did that long enough, Dr. Sbaitso would throw a <a href="https://www.youtube.com/watch?v=1GaWfCWcW3M"> parity error.</a></p>
 
-					<p>The reason I bring this up is that it shapes how I think about interface writing. Dr. Sbaitso was pre-programmed with all of these different strings to respond with.</p>
+							<p>The reason I bring this up is that it shapes how I think about interface writing. Dr. Sbaitso was pre-programmed with all of these different strings to respond with.</p>
+						</div>
 
-					<aside>
-						<p class="picturesub">Do you belive it is normal to {be bored}? What strings red} {Nicole}, don't be so defensive</p>
-					</aside>
+						<aside class="picturetwo">
+							<p>Do you belive it is normal to {be bored}? What strings red} {Nicole}, don't be so defensive</p>
+						</aside>
 
-					<p>And while most of them were cold, poorly punctuated, and hilariously impersonal, the model of prompting the reader—this kind of call and response—really worked. It felt like a conversation. Maybe it was a little awkward, but it was a good start.</p>
+						<div>
+							<p>And while most of them were cold, poorly punctuated, and hilariously impersonal, the model of prompting the reader—this kind of call and response—really worked. It felt like a conversation. Maybe it was a little awkward, but it was a good start.</p>
 
-					<p>When you’re writing for the web, you’re having the same sort of conversation with your readers. You’re telling them to do something or asking them a question. Above all, you want it to make sense and feel natural to them. Our strings have to be useful—not funny—so we need to do the extra work of figuring out what our readers need. That makes it easier to show people around, ask for more of their time, or get them to take a particular action.</p>
+							<p>When you’re writing for the web, you’re having the same sort of conversation with your readers. You’re telling them to do something or asking them a question. Above all, you want it to make sense and feel natural to them. Our strings have to be useful—not funny—so we need to do the extra work of figuring out what our readers need. That makes it easier to show people around, ask for more of their time, or get them to take a particular action.</p>
+						</div>
+					</div>
 
 					<p>In his essay <a href="https://medium.com/weird-future/we-have-always-coded-2acc5ba75929">We Have Always Coded</a>, Tim Maly says:</p>
 
@@ -205,18 +209,6 @@
 
 				<article id="tips">
 					<h2>Tips</h2>
-					<!-- <header>
-						<nav id="navtwo">
-							<ul>
-								<li>Start with questions.</li>
-								<li>Be a good tour guide.</li>
-								<li>Turn your chair.</li>
-								<li>Show you care.</li>
-								<li>Write iteratively.</li>
-							</ul>
-						</nav>
-					</header> -->
-
 
 					<!-- name attribute to close sections https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details#name -->
 					<details name="tips">
@@ -323,7 +315,7 @@
 						</div>
 					</details>
 
-					<details>
+					<details name="tips">
 						<summary>5. Write iteratively.</summary>
 						<div class="tipcontent">
 						<p>You write code iteratively, so why not the rest of it? It’s okay if your interface writing isn’t perfect. But you better believe that you need to go back and clean up those strings before you go live.</p>
