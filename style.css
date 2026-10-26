@@ -25,6 +25,7 @@ body{
 
 article{
 	padding-block-start: calc(var(--spacing)*3);
+	margin-top:
 }
 
 h1 {
@@ -167,8 +168,8 @@ h1:nth-of-type(2) {
 	max-width: 25ch;
 	box-sizing: border-box;
 	margin-inline: auto;
-	margin-block-start: calc(var(--spacing)*5);
-	margin-block-end: calc(var(--spacing)*1.5);
+	margin-block-start: calc(var(--spacing)*3);
+	margin-block-end: calc(var(--spacing)*3);
 	text-align: center;
 	hyphens: auto;
 }
@@ -176,6 +177,8 @@ h1:nth-of-type(2) {
 blockquote {
 	border-inline-start: 0.5rem solid black;
 	padding-inline-start: calc(var(--spacing)*3);
+	margin-top: calc(var(--spacing)*2);
+	margin-bottom: calc(var(--spacing)*2);
 }
 
 #tips details{
@@ -260,10 +263,6 @@ footer a {
 
 }
 
-footer p{
-	line-height: calc(var(--line-height)/5);
-}
-
 footer p:nth-of-type(1){
 	margin-top: calc(var(--spacing)*4);
 }
@@ -290,6 +289,8 @@ footer p:nth-of-type(1){
 	text-align: center;
 	max-width: 100%;
 	width: 33.7rem;
+	margin-top: calc(var(--spacing)*2);
+	margin-bottom: calc(var(--spacing)*2);
 }
 
 #spansection span:nth-child(even){
@@ -307,6 +308,7 @@ footer p:nth-of-type(1){
 	#navone .navphone{
 		display: inline;
 	}
+
 }
 
 @media (width > 700px){
@@ -325,12 +327,13 @@ footer p:nth-of-type(1){
 	}
 
 	h1:nth-of-type(2) {
-			margin-block-end: calc(var(--spacing)*2);
+		margin-block-end: calc(var(--spacing)*2);
 	}
 
 	h3{
 		font-size: 8vw;
 	}
+
 
 	.picturesub{
 		font-size: 3vw;
