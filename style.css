@@ -208,6 +208,10 @@ blockquote {
 	overflow-x: hidden;
 }
 
+.tipcontent p {
+	max-width: calc(var(--spacing)*50);
+}
+
 .quotationmark.opening {
 	color: var(--color-main);
 	font-size: calc(var(--fontsize-base)*6);
@@ -239,15 +243,46 @@ footer a {
 	border-radius: 70px;
 	background-color: var(--color-main);
 	font-family: var(--font-secondary);
-	font-size: calc(var(--fontsize-base)*1.4);
+	font-size: var(--fontsize-base);
 	text-transform:uppercase;
+
+	position: fixed;
+	display: block;
+	margin-inline-start: auto;
+	inline-size: max-content;
+	inset-block-end: var(--spacing);
+	inset-inline-end: var(--spacing);
+
 }
 
-.imgborder div {
+footer p{
+	line-height: calc(var(--line-height)/5);
+}
+
+footer p:nth-of-type(1){
+	margin-top: calc(var(--spacing)*4);
+}
+
+.imgborder div, .copyright {
 	display: flex;
 	flex-direction:row;
+	border: black 0.3rem double;
+	/* for making the flex centered */
+	justify-content: center;
+	text-align: center;
 }
 
+#spansection {
+	border: black 0.1rem solid;
+	font-size: calc(var(--fontsize-base)*2);
+	padding: var(--spacing);
+	border-radius: 20px;
+	hyphens: none;
+}
+
+#spansection span:nth-child(even){
+	color: rgb(244,232, 2);
+}
 
 @media (width > 500px){
 
@@ -273,12 +308,12 @@ footer a {
 	}
 
 	h1:nth-of-type(1) {
-	margin-block-start: calc(var(--spacing)*6);
-	margin-block-end: var(--spacing);
+		margin-block-start: calc(var(--spacing)*2);
+		/* margin-block-end: var(--spacing); */
 	}
 
 	h1:nth-of-type(2) {
-			margin-block-end: calc(var(--spacing)*6);
+			margin-block-end: calc(var(--spacing)*2);
 	}
 
 	h3{
@@ -310,3 +345,5 @@ footer a {
 		max-width: calc(var(--spacing)*50);
 	}
 }
+
+
