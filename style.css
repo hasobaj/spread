@@ -179,6 +179,8 @@ h1:nth-of-type(2) {
 }
 
 blockquote {
+	font-family: var(--font-secondary);
+	font-size: calc(var(--fontsize-base)*1.5);
 	border-inline-end: 0.5rem solid black;
 	padding-inline-end: calc(var(--spacing)*3);
 	margin-top: calc(var(--spacing)*2);
@@ -315,6 +317,36 @@ footer p:nth-of-type(1){
 	margin-block-end: var(--spacing);
 }
 
+#tips p{
+	margin: calc(var(--spacing)*2);
+}
+
+
+#tips ul {
+	font-size: calc(var(--fontsize-base)*1.5);
+	font-family: var(--font-secondary);
+	margin-block: calc(var(--spacing) * 4);
+	margin: calc(var(--spacing)*2);
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: calc(var(--spacing)/2);
+	li::before{
+		content: "• ";
+		color: rgb(244,232, 2);
+	}
+}
+
+.description {
+	font-size: calc(var(--fontsize-base)*1.5);
+	font-family: var(--font-secondary);
+}
+
+#tips aside {
+	font-size: calc(var(--fontsize-base)*1.5);
+	font-family: var(--font-secondary);
+}
+
+
 @media (width > 500px){
 
 	#navone ul{
@@ -387,6 +419,10 @@ footer p:nth-of-type(1){
 
 @media print{
 	::details-content {content-visibility: visible;}
+
+	:root{
+		color: black;
+	}
 
 }
 
