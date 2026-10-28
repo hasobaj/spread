@@ -123,6 +123,10 @@ h1:nth-of-type(2) {
 	padding-block-end: calc(var(--spacing)*8);
 }
 
+#codeforhumans > section:last-child {
+	padding-block-end: calc(var(--spacing)*2);
+}
+
 .picture1 {
 	text-align: end;
 	margin-inline: -0.25em;
@@ -137,11 +141,10 @@ h1:nth-of-type(2) {
 #interfacewriting ul {
 	font-size: calc(var(--fontsize-base)*1.5);
 	font-family: var(--font-secondary);
-	margin-block: calc(var(--spacing) * 2);
+	margin-block: calc(var(--spacing) * 4);
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: calc(var(--spacing)/2);
-
 	li::before{
 		content: "• ";
 		color: rgb(244,232, 2);
@@ -153,7 +156,9 @@ h1:nth-of-type(2) {
 	border: black 0.1rem solid;
 	border-radius: 20px;
 	padding: var(--spacing);
-	margin: var(--spacing);
+	/* auto to center */
+	margin: calc(var(--spacing)*5) auto;
+	min-width: calc(var(--spacing)*20);
 }
 
 .picturetwo{
@@ -174,10 +179,14 @@ h1:nth-of-type(2) {
 }
 
 blockquote {
-	border-inline-start: 0.5rem solid black;
-	padding-inline-start: calc(var(--spacing)*3);
+	border-inline-end: 0.5rem solid black;
+	padding-inline-end: calc(var(--spacing)*3);
 	margin-top: calc(var(--spacing)*2);
 	margin-bottom: calc(var(--spacing)*2);
+	max-width: 60%;
+	text-align: right;
+	margin-inline-start: auto;
+	margin-inline-end: var(--spacing);
 }
 
 #tips details{
@@ -252,14 +261,17 @@ footer a {
 	font-family: var(--font-secondary);
 	font-size: var(--fontsize-base);
 	text-transform:uppercase;
+	display: inline-block;
+	margin-top: calc(var(--spacing)*2);
+}
 
+#footerbutton {
 	position: fixed;
 	display: block;
-	margin-inline-start: auto;
+	/* margin-inline-start: auto; */
 	inline-size: max-content;
 	inset-block-end: var(--spacing);
 	inset-inline-end: var(--spacing);
-
 }
 
 footer p:nth-of-type(1){
@@ -273,6 +285,7 @@ footer p:nth-of-type(1){
 	/* for making the flex centered */
 	justify-content: center;
 	text-align: center;
+	padding: calc(var(--spacing)/1.5);
 }
 
 .copyright{
@@ -288,12 +301,18 @@ footer p:nth-of-type(1){
 	text-align: center;
 	max-width: 100%;
 	width: 33.7rem;
-	margin-top: calc(var(--spacing)*2);
-	margin-bottom: calc(var(--spacing)*2);
+	/* center whole section */
+	margin: auto;
+	margin-top: calc(var(--spacing)*4);
+	margin-bottom: calc(var(--spacing)*4);
 }
 
 #spansection span:nth-child(even){
 	color: rgb(244,232, 2);
+}
+
+.textspacing {
+	margin-block-end: var(--spacing);
 }
 
 @media (width > 500px){
@@ -314,6 +333,7 @@ footer p:nth-of-type(1){
 
 	body{
 		padding: calc(var(--spacing)*2);
+		margin: var(--spacing);
 
 	}
 
@@ -362,9 +382,13 @@ footer p:nth-of-type(1){
 		max-width: calc(var(--spacing)*50);
 	}
 
+}
+
+
 @media print{
 	::details-content {content-visibility: visible;}
+
 }
-}
+
 
 
