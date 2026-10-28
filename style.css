@@ -1,8 +1,6 @@
 :root {
 	--spacing: 1.2rem;
-
 	--color-main: rgb(255, 245, 49);
-
 	--font-main: HALRepost, Cutive Mono;
 	--font-secondary: Bayon, Arial;
 	--fontsize-base: 1rem;
@@ -19,7 +17,6 @@ body{
 	padding: var(--spacing);
 	font-size: var(--fontsize-base);
 	line-height: var(--line-height);
-	/* text-wrap: balance; */
 	hyphens: auto;
 }
 
@@ -27,11 +24,31 @@ article{
 	padding-block-start: calc(var(--spacing)*3);
 }
 
+aside{
+	/* temp solution */
+	overflow-wrap: anywhere;
+}
+
+span {
+	font-family: var(--font-secondary);
+}
+
 h1 {
 	text-transform:uppercase;
 	font-family: var(--font-secondary);
 	line-height: calc(var(--line-height)/1.7);
 	font-size: 20vw;
+}
+
+h1:nth-of-type(1) {
+	text-align: start;
+	margin-block: calc(var(--spacing)*3);
+}
+
+h1:nth-of-type(2) {
+	text-align: end;
+		margin-block-end: calc(var(--spacing)*4);
+
 }
 
 h2{
@@ -45,24 +62,8 @@ h3{
 	line-height: calc(var(--line-height)/1.5);
 }
 
-aside{
-	/* temp solution */
-	overflow-wrap: anywhere;
-}
-
 header{
 	padding-block-end: calc(var(--spacing)*3);
-}
-
-h1:nth-of-type(1) {
-	text-align: start;
-	margin-block: calc(var(--spacing)*3);
-}
-
-h1:nth-of-type(2) {
-	text-align: end;
-		margin-block-end: calc(var(--spacing)*4);
-
 }
 
 #namedate {
@@ -106,6 +107,11 @@ h1:nth-of-type(2) {
 	}
 }
 
+.description {
+	font-size: calc(var(--fontsize-base)*1.5);
+	font-family: var(--font-secondary);
+}
+
 #codeforhumans{
 	display: flex;
 	flex-direction: column;
@@ -114,9 +120,6 @@ h1:nth-of-type(2) {
 		/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator */
 		padding-block-end: calc(var(--spacing)*3);
 	}
-
-	& > p:not(:nth-child(1)){
-	margin-block-end: var(--spacing);}
 }
 
 #codeforhumans section{
@@ -175,7 +178,6 @@ h1:nth-of-type(2) {
 	margin-block-start: calc(var(--spacing)*3);
 	margin-block-end: calc(var(--spacing)*3);
 	text-align: center;
-	hyphens: auto;
 }
 
 blockquote {
@@ -246,15 +248,6 @@ blockquote {
 	text-align: end;
 }
 
-span {
-	font-family: var(--font-secondary);
-}
-/*
-aside span:nth-child(even){
-	font-family: var(--font-primary);
-	text-transform:uppercase;
-} */
-
 footer a {
 	padding-inline:calc(var(--spacing)/2);
 	border: black 0.1rem solid;
@@ -270,7 +263,6 @@ footer a {
 #footerbutton {
 	position: fixed;
 	display: block;
-	/* margin-inline-start: auto; */
 	inline-size: max-content;
 	inset-block-end: var(--spacing);
 	inset-inline-end: var(--spacing);
@@ -282,7 +274,6 @@ footer p:nth-of-type(1){
 
 .imgborder div, .copyright {
 	display: flex;
-	flex-direction:row;
 	border: black 0.3rem double;
 	/* for making the flex centered */
 	justify-content: center;
@@ -325,7 +316,6 @@ footer p:nth-of-type(1){
 #tips ul {
 	font-size: calc(var(--fontsize-base)*1.5);
 	font-family: var(--font-secondary);
-	margin-block: calc(var(--spacing) * 4);
 	margin: calc(var(--spacing)*2);
 	display: grid;
 	grid-template-columns: 1fr;
@@ -334,11 +324,6 @@ footer p:nth-of-type(1){
 		content: "• ";
 		color: rgb(244,232, 2);
 	}
-}
-
-.description {
-	font-size: calc(var(--fontsize-base)*1.5);
-	font-family: var(--font-secondary);
 }
 
 #tips aside {
@@ -409,7 +394,6 @@ footer p:nth-of-type(1){
 
 	.imgborder {
 		width: 50vw;
-		margin-inline: auto;
 		box-sizing: border-box;
 		max-width: calc(var(--spacing)*50);
 	}
