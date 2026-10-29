@@ -227,7 +227,7 @@ blockquote {
 }
 
 #tips {
- counter-reset: tip; /* Hannah used counter reset method for project one, so new how to use it*/
+ counter-reset: tip; /* Hannah used counter reset method for project one, so new how to use it */
 }
 #tips details{
 	margin-block-end: calc(var(--spacing)/1.5);
