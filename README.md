@@ -7,7 +7,6 @@ The article talks about how the words used in digital spaces affect the way peop
 
 Another part of the assignment was learning how to work cooperatively with a partner. Both partners were only allowed to work on the website at the same time, which required planning, organizing and making design decisions together.
 
----
 ## Approach 
 One of the main rules was that no images could be used. This was a challenge because the original article uses a lot of pictures to explain its ideas.
 
