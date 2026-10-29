@@ -14,6 +14,7 @@
 	--font-secondary: Bayon, Arial;
 	--fontsize-base: 1rem;
 	--fontsize-s:var(--fontsize-base);
+	--fontsize-l:calc(var(--fontsize-base)*1.5);
 	--line-height: 1.5;
 	--line-height-s: calc(var(--line-height)/1.4);
 }
@@ -64,8 +65,6 @@ h1:nth-of-type(1) {
 
 h1:nth-of-type(2) {
 	text-align: end;
-		margin-block-end: var(--spacing-l);
-
 }
 
 h2{
@@ -103,7 +102,7 @@ a{
 
 #navone {
 	font-family: var(--font-secondary);
-	font-size: calc(var(--fontsize-base)*1.4);
+	font-size: var(--fontsize-l);
 	text-transform:uppercase;
 	position: sticky;
 	top:var(--spacing);
@@ -139,7 +138,7 @@ a{
 }
 
 .description {
-	font-size: var(--fontsize-s);
+	font-size: var(--fontsize-l);
 	font-family: var(--font-secondary);
 	border-inline-start: solid black 0.2rem;
 	padding-inline-start: var(--spacing-neg);
@@ -161,9 +160,6 @@ a{
 	padding-block-end: calc(var(--spacing)*8);
 }
 
-#codeforhumans > section:last-child {
-	padding-block-end: var(--spacing-s);
-}
 
 .picture1 {
 	text-align: end;
@@ -177,7 +173,7 @@ a{
 }
 
 #interfacewriting ul {
-	font-size: calc(var(--fontsize-base)*1.5);
+	font-size: var(--fontsize-l);
 	font-family: var(--font-secondary);
 	margin-block: calc(var(--spacing) * 2);
 	display: grid;
@@ -191,6 +187,7 @@ a{
 
 .imgborder {
 	font-family: var(--font-secondary);
+	font-size: var(--fontsize-l);
 	border: black 0.1rem solid;
 	border-radius: 20px;
 	padding: var(--spacing);
@@ -202,7 +199,7 @@ a{
 
 .picturetwo{
 	font-family: var(--font-secondary);
-	font-size: var(--fontsize-s);
+	font-size: var(--fontsize-l);
 	line-height: var(--line-height-s);
 	border: black solid 0.1rem;
 	border-radius: 20px;
@@ -218,7 +215,7 @@ a{
 
 blockquote {
 	font-family: var(--font-secondary);
-	font-size: var(--fontsize-s);
+	font-size: var(--fontsize-l);
 	border-inline-end: 0.5rem solid black;
 	padding-inline-end: var(--spacing-m);
 	margin-top: var(--spacing-s);
@@ -235,7 +232,7 @@ blockquote {
 
 #tips summary{
 	font-family: var(--font-secondary);
-	font-size: var(--fontsize-s);
+	font-size: var(--fontsize-l);
 	text-transform:uppercase;
 	padding-inline:var(--spacing);
 	padding-block: calc(var(--spacing)/3);
@@ -284,11 +281,11 @@ blockquote {
 
 footer a {
 	padding-inline:var(--spacing-neg);
+	font-size: var(--fontsize-l);
 	border: black 0.1rem solid;
 	border-radius: 70px;
 	background-color: var(--color-main);
 	font-family: var(--font-secondary);
-	font-size: var(--fontsize-base);
 	text-transform:uppercase;
 	display: inline-block;
 	margin-top: var(--spacing-s);
@@ -351,7 +348,7 @@ footer p:nth-of-type(1){
 #tips ul {
 	font-size: var(--fontsize-s);
 	font-family: var(--font-secondary);
-	font-size: calc(var(--fontsize-base)*1.5);
+	font-size: var(--fontsize-l);
 	margin: var(--spacing-xs);
 	display: grid;
 	grid-template-columns: 1fr;
@@ -372,7 +369,7 @@ footer p:nth-of-type(1){
 	list-style-position: inside;
 	margin: var(--spacing-s);
 	font-family: var(--font-secondary);
-	font-size: calc(var(--fontsize-base)*1.5);
+	font-size: var(--fontsize-l);
 }
 
 @media (width > 500px){
@@ -460,18 +457,58 @@ footer p:nth-of-type(1){
 		padding:0;
 	}
 
-	#navone, #footerbutton{
-		display:none;
+	blockquote, .imgborder, .picturetwo, #codeforhumans section, #interfacewriting  {
+		break-inside: avoid;
+	}
+
+	h1:nth-of-type(1) {
+		margin-block: var(--spacing-xs);
+	}
+
+	h3{
+		font-size: 9vw;
+	}
+
+	blockquote {
+		border-inline-start: 0.5rem solid black;
+		border-inline-end: none;
+		padding-inline-start: var(--spacing-m);
+		text-align: left;
+		margin-inline-end: auto;
+		margin-inline-start: var(--spacing);
+	}
+
+	#codeforhumans section{
+		padding-block-end: var(--spacing-m);
+	}
+
+	.imgborder {
+		width: 70vw;
+	}
+
+	.tipcontent{
+		block-size: auto;
+		overflow: visible;
+		margin-block-end: var(--spacing-l);
+		border: none;
+	}
+
+	#tips summary::after{
+		content-visibility: hidden;
 	}
 
 	#tips details::details-content{
 		content-visibility: visible;
 	}
 
-	.tipcontent{
-		block-size: auto;
-		overflow: visible;
+	footer a, #footerbutton{
+		display:none;
 	}
+
+	a {
+		text-decoration: none;
+	}
+
 }
 
 
