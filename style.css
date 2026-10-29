@@ -226,28 +226,39 @@ blockquote {
 	margin-inline-end: var(--spacing);
 }
 
+#tips {
+ counter-reset: tip; /* Hannah used counter reset method for project one, so new how to use it*/
+}
 #tips details{
 	margin-block-end: calc(var(--spacing)/1.5);
+	counter-increment: tip;
 }
 
 #tips summary{
 	font-family: var(--font-secondary);
 	font-size: var(--fontsize-l);
 	text-transform:uppercase;
-	padding-inline:var(--spacing);
+	padding-inline:var(--spacing-s);
 	padding-block: calc(var(--spacing)/3);
 	border: black 0.1rem solid;
 	border-radius: 70px;
 	background-color: var(--color-main);
+	position: relative;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 	cursor: pointer;
+}
+
+#tips summary::before{
+	content: counter(tip) ".";
+	position: absolute;
+	inset-inline-start: var(--spacing);
 }
 
 #tips summary::after{
 	content: ">";
 	transform: rotate(90deg);
+	margin-inline-start: auto;
 }
 
 #tips details:open summary::after{
