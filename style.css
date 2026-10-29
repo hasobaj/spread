@@ -440,12 +440,30 @@ footer p:nth-of-type(1){
 
 
 @media print{
-	::details-content {content-visibility: visible;}
 
 	:root{
+		--color-main: white;
+		--color-accent:black;
 		color: black;
 	}
 
+	body{
+		margin:0;
+		padding:0;
+	}
+
+	#navone, #footerbutton{
+		display:none;
+	}
+
+	#tips details::details-content{
+		content-visibility: visible;
+	}
+
+	.tipcontetn{
+		block-size: auto;
+		overflow: visible;
+	}
 }
 
 
