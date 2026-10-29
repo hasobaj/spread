@@ -38,6 +38,12 @@ h1 {
 	font-family: var(--font-secondary);
 	line-height: calc(var(--line-height)/1.7);
 	font-size: 20vw;
+	hyphens: none;
+	white-space: nowrap; /* prevents automatic break because Interface word is bigger than Humans https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/white-space */
+}
+
+h1 span{
+	display: block; /*breaks headdings at same point*/
 }
 
 h1:nth-of-type(1) {
@@ -54,6 +60,7 @@ h1:nth-of-type(2) {
 h2{
 	font-family: var(--font-secondary);
 	font-size: calc(var(--fontsize-base)*3);
+	margin-block-end: clac(var(--spacing)/1.5);
 }
 
 h3{
@@ -64,6 +71,16 @@ h3{
 
 header{
 	padding-block-end: calc(var(--spacing)*3);
+}
+
+a{
+	text-decoration: underline;
+	text-decoration-color: balck;
+	text-decoration-thickness: 0.1em;
+}
+
+#headerinfo{
+	max-width: 60ch;
 }
 
 #namedate {
@@ -79,6 +96,9 @@ header{
 	text-transform:uppercase;
 	position: sticky;
 	top:var(--spacing);
+	a{
+		text-decoration: none;
+	}
 	/* less words in nav to make font size bigger */
 	.navphone{
 		display: none;
@@ -110,15 +130,19 @@ header{
 .description {
 	font-size: calc(var(--fontsize-base)*1.5);
 	font-family: var(--font-secondary);
+	border-inline-start: solid black 0.2rem;
+	padding-inline-start: var(--spacing);
+	margin-inline-start: calc(var(--spacing)*3);
 }
 
 #codeforhumans{
 	display: flex;
 	flex-direction: column;
 
-	& > p:nth-child(1){
+	& > p:first-child{
 		/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator */
 		padding-block-end: calc(var(--spacing)*3);
+		max-width: 60ch;
 	}
 }
 
@@ -144,7 +168,7 @@ header{
 #interfacewriting ul {
 	font-size: calc(var(--fontsize-base)*1.5);
 	font-family: var(--font-secondary);
-	margin-block: calc(var(--spacing) * 4);
+	margin-block: calc(var(--spacing) * 2);
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: calc(var(--spacing)/2);
@@ -160,8 +184,10 @@ header{
 	border-radius: 20px;
 	padding: var(--spacing);
 	/* auto to center */
-	margin: calc(var(--spacing)*5) auto;
+	/* margin: calc(var(--spacing)*5) auto; */
+	margin: calc(var(--spacing)*4);
 	min-width: calc(var(--spacing)*20);
+	margin-inline: auto;
 }
 
 .picturetwo{
@@ -171,8 +197,8 @@ header{
 	border: black solid 0.1rem;
 	border-radius: 20px;
 	padding: calc(var(--spacing)*1.5);
-	width: fit-content;
-	max-width: 25ch;
+	width: 25ch;
+	max-width: 100%;
 	box-sizing: border-box;
 	margin-inline: auto;
 	margin-block-start: calc(var(--spacing)*3);
@@ -226,8 +252,6 @@ blockquote {
 	border-radius: 20px;
 	margin-block-start: calc(var(--spacing)/2);
 	margin-block-end: var(--spacing);
-	padding:var(--spacing);
-
 	block-size: calc(var(--spacing)*23);
 	overflow-x: hidden;
 }
@@ -258,6 +282,7 @@ footer a {
 	text-transform:uppercase;
 	display: inline-block;
 	margin-top: calc(var(--spacing)*2);
+	text-decoration: none;
 }
 
 #footerbutton {
@@ -309,14 +334,14 @@ footer p:nth-of-type(1){
 }
 
 #tips p{
-	margin: calc(var(--spacing)*2);
+	margin: calc(var(--spacing)*1.5);
 }
 
 
 #tips ul {
 	font-size: calc(var(--fontsize-base)*1.5);
 	font-family: var(--font-secondary);
-	margin: calc(var(--spacing)*2);
+	margin: calc(var(--spacing)*1.5);
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: calc(var(--spacing)/2);
@@ -351,11 +376,14 @@ footer p:nth-of-type(1){
 	body{
 		padding: calc(var(--spacing)*2);
 		margin: var(--spacing);
-
 	}
 
 	h1{
 		font-size: 13vw;
+	}
+
+	h1 span{
+		display: inline;
 	}
 
 	h1:nth-of-type(1) {
@@ -370,26 +398,13 @@ footer p:nth-of-type(1){
 		font-size: 8vw;
 	}
 
-
 	.picturesub{
 		font-size: 3vw;
-	}
-
-	#picturegrid{
-		margin: calc(var(--spacing)*4);
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		gap: calc(var(--spacing)*4);
-		align-items: center;
 	}
 
 	#interfacewriting ul{
 		grid-template-columns: max-content max-content;
 		column-gap: calc(var(--spacing)*3);
-	}
-
-	.picturetwo{
-		margin-block: 0;
 	}
 
 	.imgborder {
@@ -398,6 +413,19 @@ footer p:nth-of-type(1){
 		max-width: calc(var(--spacing)*50);
 	}
 
+}
+
+@media (width>900px){
+	#picturegrid{
+		margin: calc(var(--spacing)*4);
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: calc(var(--spacing)*4);
+		align-items: center;
+	}
+	.picturetwo{
+		margin-block: 0;
+	}
 }
 
 
