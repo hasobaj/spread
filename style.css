@@ -13,7 +13,7 @@
 	--font-main: HALRepost, Cutive Mono;
 	--font-secondary: Bayon, Arial;
 	--fontsize-base: 1rem;
-	--fontsize-s:var(--fontsize-s);
+	--fontsize-s:var(--fontsize-base);
 	--line-height: 1.5;
 	--line-height-s: calc(var(--line-height)/1.4);
 }
@@ -71,7 +71,7 @@ h1:nth-of-type(2) {
 h2{
 	font-family: var(--font-secondary);
 	font-size: calc(var(--fontsize-base)*3);
-	margin-block-end: clac(var(--spacing)/1.5);
+	margin-block-end: calc(var(--spacing)/1.5);
 }
 
 h3{
@@ -86,7 +86,7 @@ header{
 
 a{
 	text-decoration: underline;
-	text-decoration-color: balck;
+	text-decoration-color: black;
 	text-decoration-thickness: 0.1em;
 }
 
@@ -142,7 +142,7 @@ a{
 	font-size: var(--fontsize-s);
 	font-family: var(--font-secondary);
 	border-inline-start: solid black 0.2rem;
-	padding-inline-start: var(--spacing);
+	padding-inline-start: var(--spacing-neg);
 	margin-inline-start: var(--spacing-m);
 }
 
@@ -267,7 +267,7 @@ blockquote {
 }
 
 .tipcontent p {
-	max-width: calc(var(--spacing)*50);
+	max-width: calc(var(--spacing)*40);
 }
 
 .quotationmark.opening {
@@ -344,13 +344,14 @@ footer p:nth-of-type(1){
 }
 
 #tips p{
-	margin: var(--spacing-xs);
+	margin: calc(var(--spacing-neg)*1.7);
 }
 
 
 #tips ul {
 	font-size: var(--fontsize-s);
 	font-family: var(--font-secondary);
+	font-size: calc(var(--fontsize-base)*1.5);
 	margin: var(--spacing-xs);
 	display: grid;
 	grid-template-columns: 1fr;
@@ -366,6 +367,13 @@ footer p:nth-of-type(1){
 	font-family: var(--font-secondary);
 }
 
+#tips ol{
+	list-style-type: decimal;
+	list-style-position: inside;
+	margin: var(--spacing-s);
+	font-family: var(--font-secondary);
+	font-size: calc(var(--fontsize-base)*1.5);
+}
 
 @media (width > 500px){
 
@@ -460,7 +468,7 @@ footer p:nth-of-type(1){
 		content-visibility: visible;
 	}
 
-	.tipcontetn{
+	.tipcontent{
 		block-size: auto;
 		overflow: visible;
 	}
